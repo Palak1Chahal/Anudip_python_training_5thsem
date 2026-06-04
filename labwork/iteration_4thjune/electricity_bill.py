@@ -1,20 +1,20 @@
-#programmm to calculate the electricity bill
-units = int(input("Enter units: "))
+#Take units consumed from user
+units = int(input("Enter Units Consumed: "))
 
-#for low category
+# Calculate bill using slab rates
 if units <= 100:
     bill = units * 5
-    category = "Low"
-    
-#for medium category
-elif units <= 200:
-    bill = units * 7
-    category = "Medium"
-# find high category
-else:
-    bill = units * 10
-    category = "High"
+    category = "Low Consumption"
 
-print("Units Consumed =", units)
-print("Total Bill = ₹", bill)
-print("Category =", category)
+elif units <= 200:
+    bill = (100 * 5) + (units - 100) * 7
+    category = "Medium Consumption"
+
+else:
+    bill = (100 * 5) + (100 * 7) + (units - 200) * 10
+    category = "High Consumption"
+
+# Display result
+print("Units Consumed:", units)
+print("Total Bill: ₹", bill)
+print("Category:", category)
