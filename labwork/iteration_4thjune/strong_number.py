@@ -6,7 +6,7 @@ factorial_sum = 0
 
 while num > 0:
     digit = num % 10
-#for increasing the number
+#for calculating the factorial
     factorial = 1
     for i in range(1, digit + 1):
         factorial *= i
