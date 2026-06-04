@@ -1,17 +1,9 @@
-import random
+valid_pin = 1234
+while (valid_pin):
+    pin = int(input("Enter PIN: "))
 
-secret_number = random.randint(1, 50)
-attempts = 0
-
-while True:
-    guess = int(input("Enter your guess: "))
-    attempts += 1
-
-    if guess > secret_number:
-        print("Too High")
-    elif guess < secret_number:
-        print("Too Low")
-    else:
-        print("Correct Guess")
-        print("Total Attempts:", attempts)
+    if pin == valid_pin:
+        print("Access Granted.")
         break
+    else:
+        print("Incorrect PIN. Try Again.")
