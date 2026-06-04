@@ -1,3 +1,4 @@
+#programm to calculate the secret numbers
 import random
 
 secret_number = random.randint(1, 50)
@@ -6,7 +7,7 @@ attempts = 0
 while True:
     guess = int(input("Enter your guess: "))
     attempts += 1
-
+#if the numbers is tooo high or not
     if guess > secret_number:
         print("Too High")
     elif guess < secret_number:
